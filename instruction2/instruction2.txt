@@ -1,0 +1,11 @@
+Oh no, someone has made a bad security decision.
+
+In this directory there are the files plaintext1.txt, ciphertext1.txt and ciphertext2.txt.
+
+Both ciphertext1.txt and ciphertext2.txt were made from a One Time Pad cryptosystem.  Unfortunately the operator reused the key.  That is, both of these ciphertexts were encrypted using the One Time Pad scheme with the same key.  
+
+What's worse, you have managed to get the plaintext for ciphertext1.txt!  This file is called plaintext1.txt.
+
+Now it is an easy matter to find plaintext2.txt, which is the plaintext for ciphertext2.txt. 
+
+For this problem please submit plaintext2.txt.
