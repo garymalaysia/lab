@@ -19,11 +19,21 @@ def scan_all_ports(host): # perfrom all port scan
             if type(each) is dict:
                 if each['state'] == 'open':
                     buffer.append(each['portid'])
-                    # print (each['portid'], 'is',each['state'] )
 
     return buffer
 
 
+def scan_all_open_ports(ports:list):
+    nmap = nmap3.NmapHostDiscovery()
+    #print(listToString(ports))
+    json_output  = nmap.nmap_portscan_only(target=sys.argv[1], args="-sV -sT -A -p %s" % (listToString(ports)))
+    json_in_dict = json.dumps(json_output, indent=4)
+    print (json_in_dict)
+
+
+def listToString(s):
+    str1 = ","
+    return (str1.join(s))
 
 if __name__ == "__main__":  
-    print(scan_all_ports(sys.argv[1]))
+    scan_all_open_ports(scan_all_ports(sys.argv[1]))
