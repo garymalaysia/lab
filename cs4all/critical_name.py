@@ -10,7 +10,7 @@ def naughty_or_nice(x):
     name_len = len(x)
     if name_len % 2 == 0 :
         return ("NICE : )", nice)
-    elif name_len >= 10 AND name_len % 2 == 0:
+    elif name_len >= 10 && name_len % 2 == 0:
         return (" Very Naughty T.T ", very_naughty)
     else:
         return ("Naughty >.< ", naughty)
