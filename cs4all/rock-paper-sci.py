@@ -1,5 +1,4 @@
-import sys, time
-import quantumrandom
+import sys, time, os
 import emoji
 
 #create a list of play options
@@ -8,8 +7,8 @@ t = ["rock", "paper", "scissors"]
 student = input("Student name: ")
 
 #assign a random play to the computer
-rand=quantumrandom.randint(0,2)
-computer = t[int(rand)]
+rand=int.from_bytes(os.urandom(1), sys.byteorder)
+computer = t[int(rand%3)]
 
 kids = 0 # Number of win for kids
 machine = 0 # number of win for machine
@@ -83,10 +82,12 @@ while kids != 2 and machine != 2 :
     else:
         print("That's not a valid play. Check your spelling!")
     
-    rand=quantumrandom.randint(0,2)
-    computer = t[int(rand)]
+    rand=int.from_bytes(os.urandom(1), sys.byteorder)
+    computer = t[int(rand%3)]
+    print ("-----------------------------------")
     print ("{} count: ".format(student), kids)
     print ("Machine count: ", machine)
+    print ("-----------------------------------")
 
     if kids >= 2:
 
