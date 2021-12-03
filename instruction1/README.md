@@ -11,6 +11,6 @@ To Do:
 Tip : Use a wordlist. 
 
 ```bash
-$ apt-get install --reinstall wamerican
+$ sudo apt-get install --reinstall wamerican
 $ cd /usr/share/dict
 ```
