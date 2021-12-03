@@ -5,7 +5,12 @@ To Do:
 
 To Do: 
 
-1) watch and listen to https://www.youtube.com/watch?v=vsvOrtcrA5c
+1) watch and listen to https://www.youtube.com/watch?v=vuNH4kpuobc
 2) Write a python program to find this word. Yes you can do this!
 
-Tip : Use a wordlist. It can be located online or in any linux file system.
+Tip : Use a wordlist. 
+
+```bash
+$ apt-get install --reinstall wamerican
+$ cd /usr/share/dict
+```
